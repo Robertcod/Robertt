@@ -1,0 +1,247 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", system-ui, "Segoe UI", "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+main {
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
+  padding: 20px; /* Espacio alrededor del contenido */
+  margin: 0 auto; /* Centrado en pantallas grandes */
+}
+.tituloPrincipal {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.paginaDescripcion {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.671);
+  margin-bottom: 1.2rem;
+}
+.columnauno {
+  display: grid;
+  gap: 2.5em;
+}
+.NombreInput {
+  color: #a68160;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+input,
+select,
+textarea {
+  background-color: rgba(230, 230, 230, 0.589);
+  border: none;
+  height: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: auto;
+  width: 100%;
+  padding: 0.6rem 0;
+  border-radius: 0.7rem;
+  resize: vertical; /* Permite redimensionar la caja de texto solo verticalmente */
+  overflow-y: auto; /* Permite desplazarse si el texto es demasiado largo */
+}
+input::placeholder,
+textarea::placeholder {
+  padding-left: 10px; /* Mueve el texto hacia la derecha */
+}
+.file-upload-input {
+  display: none; /* Oculta el input real */
+}
+
+.file-upload-label {
+    display: flex;
+  background-color: rgba(230, 230, 230, 0.589);
+  border: none;
+  padding: 0.6rem 0;
+  font-size: 1.2rem;
+  border-radius: 0.7rem;
+  color: #757575;
+  padding-left: 10px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #9c9c9c;
+  color: white;
+}
+
+.contendorForm {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5em;
+}
+
+.tituloPrevisualizacion {
+  font-weight: bold;
+  font-size: 2.2rem;
+  color: #a68160;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.contenedor-card {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  color: white;
+  width: 100%;
+}
+
+.card-img {
+  border-radius: 1rem 0 0 1rem;
+  width: 12rem; /* Fija el tamaño de la imagen */
+  height: 12rem; /* Asegura que la imagen tenga dimensiones específicas */
+  background-color: rgba(
+    230,
+    230,
+    230,
+    0.589
+  ); /* Color de fondo para la imagen */
+  flex-shrink: 0; /* Evita que la imagen se reduzca si hay poco espacio */
+  overflow: hidden;
+}
+
+.card-img img {
+  border-radius: 1rem 0 0 1rem;
+  object-fit: cover; /* Asegura que la imagen ocupe completamente el contenedor */
+  width: 100%; /* La imagen ocupa el 100% de su contenedor */
+  height: 100%; /* La imagen se adapta al alto del contenedor */
+}
+
+.card-text {
+  background-color: #a68160;
+  border-radius: 0 1rem 1rem 0;
+  word-wrap: break-word;
+  max-width: 32rem; /* Establece el máximo ancho de la tarjeta de texto */
+  width: 100%; /* El texto se ajusta al ancho disponible */
+  padding: 1rem;
+  gap: 0.5rem;
+  display: flex; /* Cambié a flexbox para un mejor control del layout */
+  flex-direction: column; /* Los elementos dentro de .card-text se apilan verticalmente */
+  justify-content: space-between; /* Asegura que el contenido empiece desde arriba */
+}
+
+.card-text p {
+  margin: 0; /* Elimina márgenes para evitar desbordamientos */
+  padding: 0;
+}
+
+.descripcionPrevisualizacion {
+  white-space: normal; /* Asegura que el texto en la descripción se ajuste */
+  overflow-wrap: break-word; /* Rompe palabras largas si es necesario */
+  word-break: break-word; /* Asegura que las palabras largas se rompan */
+  width: 100%; /* Asegura que el texto ocupe el 100% del ancho disponible */
+}
+.duracionPrecio {
+  display: flex;
+  justify-content: space-between;
+}
+.tituloPrevisualizacion,
+.descripcionPrevisualizacion,
+.duracionPrecio p {
+  margin-bottom: 0.5rem; /* Agrega un espacio entre los párrafos */
+}
+
+.columnados {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.columnadosrowdos {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+  gap: 1.5rem; /* Espacio entre columnas */
+}
+
+.columnadosrowdos .infoinput input {
+  width: 100%; /* Asegura que los inputs ocupen todo el ancho de su contenedor */
+}
+.guardar{
+    background-color: #a68160; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease; /* Transición de color al hacer hover */
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+.guardar:hover{
+    background-color: #ffffff; /* Cambia el color de fondo al hacer hover */
+    color: #a68160;
+    border: 2px solid #a68160; /* Cambia el color del texto al hacer hover */
+}
+
+@media (max-width: 768px) {
+  .contendorForm {
+    grid-template-columns: 1fr; /* En pantallas más pequeñas, las columnas se apilan */
+    padding: 0.6em;
+  }
+  .tituloPrevisualizacion {
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #a68160;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .duracionPrecio {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .card {
+    display: grid;
+  }
+  .card-img {
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: 100%; /* Fija el tamaño de la imagen */
+    height: 24rem;
+  }
+
+  .card-img img {
+    border-radius: 0;
+    object-fit: cover;
+    width: 100%; /* La imagen ocupa el 100% de su contenedor */
+    height: 100%; /* La imagen se adapta al alto del contenedor */
+  }
+
+  .card-text {
+    max-width: 100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+
+  .columnadosrowdos {
+    display: grid;
+    grid-template-columns: 1fr; /* Dos columnas de igual tamaño */
+    gap: 1.5rem; /* Espacio entre columnas */
+  }
+}
+@media (min-width: 768px) and (max-width: 1124px) {
+  .card {
+    display: grid;
+  }
+  .card-img {
+    border-radius: 1rem 1rem 0rem 0rem;
+    width: 100%; /* Fija el tamaño de la imagen */
+    height: 24rem;
+  }
+
+  .card-img img {
+    border-radius: 0;
+    object-fit: cover;
+    width: 100%; /* La imagen ocupa el 100% de su contenedor */
+    height: 100%; /* La imagen se adapta al alto del contenedor */
+  }
+
+  .card-text {
+    max-width: 100%;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+}
